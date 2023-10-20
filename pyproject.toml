@@ -1,0 +1,106 @@
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+select = [
+    "F", # Pyflakes
+    "W", # pycodestyle Warning
+    "E", # pycodestyle Error
+    "C90",  # mccabe
+    "I", # isort
+    "N", # pep8-naming
+    "D", # pydocstyle
+    "UP", # pyupgrade
+    "BLE",  # flake8-blind-except
+    "FBT",  # flake8-boolean-trap
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "C4", # flake8-comprehensions
+    "EM",  # flake8-errmsg
+    "FA",  # flake8-future-annotations
+    "ISC", # flake8-implicit-str-concat
+    "ICN",  # flake8-import-conventions
+    "G",  # flake8-logging-format
+    "INP", # flake8-no-pep420
+    "PIE", # flake8-pie
+    "PYI", # flake8-pyi
+    "PT",  # flake8-pytest-style
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "RET",  # flake8-return
+    "SLF",  # flake8-self
+    "SLOT", # flake8-slots
+    "SIM", # flake8-simplify
+    "TID", # flake8-tidy-imports
+    "TCH",  # flake8-type-checking
+    "INT", # flake8-gettext
+    "ARG",  # flake8-unused-arguments
+    "PTH",  # flake8-use-pathlib
+    "PGH",  # pygrep-hooks
+    "PL", # Pylint
+    "TRY",  # tryceratops
+    "FLY",  # flynt
+    "NPY",  # NumPy-specific rules
+    "PERF", # Perflint
+    # "FURB", # refurb // awaiting non preview version
+    # "LOG", # flake8-logging // awaiting non preview version
+    "RUF", # Ruff-specific rules
+
+    # OPTIONAL:
+
+    "ASYNC",  # flake8-async
+    "S",  # flake8-bandit
+    "DTZ",  # flake8-datetimez
+    "PD",  # pandas-vet
+]
+
+ignore = [
+    "D10",
+    "PERF203",  # has no sense since python3.11
+]
+
+[tool.ruff.isort]
+force-single-line = false
+order-by-type = false
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.mypy]
+exclude = ".venv"
+python_version = "3.11"
+
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = false
+extra_checks = true
+follow_imports = "normal"
+ignore_missing_imports = true
+no_implicit_optional = true
+no_implicit_reexport = true
+show_error_codes = true
+strict_equality = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.0"
+mypy = "^1.6.1"
+ruff = "^0.1.1"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
