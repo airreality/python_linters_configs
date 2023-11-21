@@ -26,7 +26,6 @@ select = [
     "INP",  # flake8-no-pep420
     "PIE",  # flake8-pie
     "PYI",  # flake8-pyi
-    "PT",  # flake8-pytest-style
     "Q",  # flake8-quotes
     "RSE",  # flake8-raise
     "RET",  # flake8-return
@@ -42,7 +41,7 @@ select = [
     "PL",  # pylint
     "TRY",  # tryceratops
     "FLY",  # flynt
-    "PERF",  # Perflint
+    "PERF",  # perflint
     # "FURB",  # refurb // awaiting non preview version
     # "LOG",  # flake8-logging // awaiting non preview version
     "RUF",  # ruff-specific rules
@@ -52,8 +51,9 @@ select = [
     "ASYNC",  # flake8-async
     "S",  # flake8-bandit
     "DTZ",  # flake8-datetimez
-    "NPY",  # NumPy-specific rules
+    "NPY",  # numpy-specific rules
     "PD",  # pandas-vet
+    "PT",  # flake8-pytest-style
 ]
 
 ignore = [
@@ -99,7 +99,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 black = "^23.11.0"
 mypy = "^1.7.0"
-ruff = "^0.1.5"
+ruff = "^0.1.6"
 
 [[tool.poetry.source]]
 name = "PyPI"
