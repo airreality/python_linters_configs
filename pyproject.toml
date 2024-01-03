@@ -104,9 +104,9 @@ warn_unused_ignores = true
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.12.0"
-mypy = "^1.7.1"
-ruff = "^0.1.8"
+black = "^23.12.1"
+mypy = "^1.8.0"
+ruff = "^0.1.11"
 
 [[tool.poetry.source]]
 name = "PyPI"
