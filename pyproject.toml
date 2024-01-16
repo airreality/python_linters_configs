@@ -61,6 +61,7 @@ ignore = [
     "PERF203",  # has no sense since python3.11
     "PT004",  # https://github.com/astral-sh/ruff/issues/8796
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
+    "S101",
 ]
 
 [tool.ruff.lint.flake8-pytest-style]
@@ -85,7 +86,7 @@ disallow_any_generics = true
 disallow_incomplete_defs = true
 disallow_subclassing_any = true
 disallow_untyped_calls = true
-disallow_untyped_defs = false
+disallow_untyped_defs = true
 extra_checks = true
 follow_imports = "normal"
 ignore_missing_imports = true
@@ -106,7 +107,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"
 mypy = "^1.8.0"
-ruff = "^0.1.11"
+ruff = "^0.1.12"
 
 [[tool.poetry.source]]
 name = "PyPI"
