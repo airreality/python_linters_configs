@@ -4,6 +4,8 @@ line-length = 120
 [tool.ruff]
 target-version = "py311"
 line-length = 120
+
+[tool.ruff.lint]
 select = [
     "F",  # pyflakes
     "W",  # pycodestyle Warning
@@ -62,6 +64,7 @@ ignore = [
     "PT004",  # https://github.com/astral-sh/ruff/issues/8796
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "S101",
+    "PLR6201",  # set has no sense if you will use it only once
 ]
 
 [tool.ruff.lint.flake8-pytest-style]
@@ -69,12 +72,12 @@ ignore = [
 fixture-parentheses = false
 mark-parentheses = false
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 force-single-line = false
 order-by-type = false
 required-imports = ["from __future__ import annotations"]
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "numpy"
 
 [tool.mypy]
@@ -107,7 +110,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"
 mypy = "^1.8.0"
-ruff = "^0.1.12"
+ruff = "^0.2.0"
 
 [[tool.poetry.source]]
 name = "PyPI"
