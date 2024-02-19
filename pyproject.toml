@@ -64,6 +64,9 @@ ignore = [
     "PLR6201",  # set has no sense if you will use it only once
 ]
 
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG001", "FBT001"]  # not compatible with pytest logic
+
 [tool.ruff.lint.flake8-pytest-style]
 # https://github.com/astral-sh/ruff/issues/8796
 fixture-parentheses = false
