@@ -57,7 +57,6 @@ select = [
 
 ignore = [
     "D10",
-    "PERF203",  # has no sense since python3.11
     "PT004",  # https://github.com/astral-sh/ruff/issues/8796
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "S101",
@@ -78,7 +77,9 @@ order-by-type = false
 required-imports = ["from __future__ import annotations"]
 
 [tool.ruff.lint.pydocstyle]
-convention = "pep257"
+# https://github.com/astral-sh/ruff/issues/6606
+# convention = "sphinx"
+convention = "google"
 
 [tool.mypy]
 exclude = ".venv"
