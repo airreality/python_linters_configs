@@ -61,7 +61,7 @@ ignore = [
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "PT007",
     "S101",
-    "PLR6201",  # set has no sense if you will use it only once
+    "PLR6201",  # set has no sense if you use it only once
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -112,7 +112,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.9.0"
-ruff = "^0.3.3"
+ruff = "^0.3.6"
 
 [[tool.poetry.source]]
 name = "PyPI"
