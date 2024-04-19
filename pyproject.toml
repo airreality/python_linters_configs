@@ -41,7 +41,7 @@ select = [
     "TRY",  # tryceratops
     "FLY",  # flynt
     "PERF",  # perflint
-    # "FURB",  # refurb // awaiting non preview version
+    "FURB",  # refurb
     "LOG",  # flake8-logging
     "RUF",  # ruff-specific rules
 
@@ -112,7 +112,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.9.0"
-ruff = "^0.3.7"
+ruff = "^0.4.1"
 
 [[tool.poetry.source]]
 name = "PyPI"
