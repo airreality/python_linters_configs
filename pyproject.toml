@@ -111,8 +111,8 @@ warn_unused_ignores = true
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.9.0"
-ruff = "^0.4.1"
+mypy = "^1.10.0"
+ruff = "^0.4.3"
 
 [[tool.poetry.source]]
 name = "PyPI"
