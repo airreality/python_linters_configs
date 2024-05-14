@@ -94,7 +94,7 @@ disallow_untyped_calls = true
 disallow_untyped_defs = true
 extra_checks = true
 follow_imports = "normal"
-ignore_missing_imports = true
+ignore_missing_imports = false
 local_partial_types = true
 no_implicit_optional = true
 no_implicit_reexport = true
@@ -106,6 +106,10 @@ warn_redundant_casts = true
 warn_return_any = true
 warn_unused_configs = true
 warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["allure"]
+ignore_missing_imports = true
 
 [tool.poetry.group.dev]
 optional = true
