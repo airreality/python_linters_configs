@@ -108,8 +108,14 @@ warn_unused_configs = true
 warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
+# allure is not type annotated
 module = ["allure"]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+# PyHamcrest has a lot of incorrect type annotations
+module = ["hamcrest"]
+follow_imports = "skip"
 
 [tool.poetry.group.dev]
 optional = true
