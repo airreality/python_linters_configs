@@ -122,7 +122,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.10.0"
-ruff = "^0.4.6"
+ruff = "^0.4.10"
 
 [[tool.poetry.source]]
 name = "PyPI"
