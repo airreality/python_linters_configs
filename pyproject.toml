@@ -61,7 +61,6 @@ ignore = [
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "PT007",
     "S101",
-    "PLR6201",  # set has no sense if you use it only once
 ]
 
 [tool.ruff.lint.per-file-ignores]
