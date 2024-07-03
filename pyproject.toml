@@ -1,5 +1,5 @@
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 120
 
 [tool.ruff.lint]
@@ -61,6 +61,7 @@ ignore = [
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "PT007",
     "S101",
+    "UP040",  # mypy does not support yet
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -83,7 +84,7 @@ convention = "google"
 
 [tool.mypy]
 exclude = ".venv"
-python_version = "3.11"
+python_version = "3.12"
 
 check_untyped_defs = true
 disallow_any_generics = true
