@@ -4,9 +4,12 @@ line-length = 120
 
 [tool.ruff.lint]
 select = [
-    "F",  # pyflakes
-    "W",  # pycodestyle Warning
-    "E",  # pycodestyle Error
+
+    # UNIVERSAL:
+
+    "F",  # Pyflakes
+    "W",  # pycodestyle warning
+    "E",  # pycodestyle error
     "C90",  # mccabe
     "I",  # isort
     "N",  # pep8-naming
@@ -16,11 +19,14 @@ select = [
     "FBT",  # flake8-boolean-trap
     "B",  # flake8-bugbear
     "A",  # flake8-builtins
+    "COM", # flake8-commas
     "C4",  # flake8-comprehensions
     "EM",  # flake8-errmsg
+    "EXE",  # flake8-executable
     "FA",  # flake8-future-annotations
     "ISC",  # flake8-implicit-str-concat
     "ICN",  # flake8-import-conventions
+    "LOG",  # flake8-logging
     "G",  # flake8-logging-format
     "INP",  # flake8-no-pep420
     "PIE",  # flake8-pie
@@ -37,22 +43,34 @@ select = [
     "ARG",  # flake8-unused-arguments
     "PTH",  # flake8-use-pathlib
     "PGH",  # pygrep-hooks
-    "PL",  # pylint
+    "PL",  # Pylint
     "TRY",  # tryceratops
     "FLY",  # flynt
-    "PERF",  # perflint
+    "PERF",  # Perflint
     "FURB",  # refurb
-    "LOG",  # flake8-logging
-    "RUF",  # ruff-specific rules
+    "RUF",  # Ruff-specific rules
 
     # OPTIONAL:
 
+    "YTT",  # flake8-2020
+    "ANN",  # flake8-annotations
     "ASYNC",  # flake8-async
     "S",  # flake8-bandit
     "DTZ",  # flake8-datetimez
-    "NPY",  # numpy-specific rules
+    "NPY",  # NumPy-specific rules
     "PD",  # pandas-vet
     "PT",  # flake8-pytest-style
+
+    # IGNORE:
+
+    "CPY",  # flake8-copyright
+    "T10",  # flake8-debugger
+    "DJ",  # flake8-django
+    "T20",  # flake8-print
+    "TD",  # flake8-todos
+    "FIX",  # flake8-fixme
+    "ERA",  # eradicate
+    "AIR",  # Airflow
 ]
 
 ignore = [
@@ -121,8 +139,8 @@ follow_imports = "skip"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.10.0"
-ruff = "^0.5.0"
+mypy = "^1.10.1"
+ruff = "^0.5.1"
 
 [[tool.poetry.source]]
 name = "PyPI"
