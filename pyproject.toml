@@ -19,7 +19,6 @@ select = [
     "FBT",  # flake8-boolean-trap
     "B",  # flake8-bugbear
     "A",  # flake8-builtins
-    "COM", # flake8-commas
     "C4",  # flake8-comprehensions
     "EM",  # flake8-errmsg
     "EXE",  # flake8-executable
@@ -63,6 +62,7 @@ select = [
 
     # IGNORE:
 
+    "COM", # flake8-commas
     "CPY",  # flake8-copyright
     "T10",  # flake8-debugger
     "DJ",  # flake8-django
