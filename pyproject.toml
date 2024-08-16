@@ -85,11 +85,6 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["ARG001", "ARG004", "FBT001"]  # not compatible with pytest logic
 
-[tool.ruff.lint.flake8-pytest-style]
-# https://github.com/astral-sh/ruff/issues/8796
-fixture-parentheses = false
-mark-parentheses = false
-
 [tool.ruff.lint.isort]
 force-single-line = false
 order-by-type = false
@@ -127,7 +122,7 @@ warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 # allure is not type annotated
-module = ["allure"]
+module = ["allure", "docker"]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
@@ -139,8 +134,8 @@ follow_imports = "skip"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.10.1"
-ruff = "^0.5.1"
+mypy = "^1.11.1"
+ruff = "^0.6.0"
 
 [[tool.poetry.source]]
 name = "PyPI"
