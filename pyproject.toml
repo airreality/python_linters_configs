@@ -78,12 +78,13 @@ ignore = [
     "PT004",  # https://github.com/astral-sh/ruff/issues/8796
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "PT007",
+    "PT019",  # does not understand parametrization arguments which names start with underscore
     "S101",
     "UP040",  # mypy does not support yet
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["ARG001", "ARG004", "FBT001"]  # not compatible with pytest logic
+"tests/*" = ["ARG001", "ARG002", "ARG004", "FBT001"]  # not compatible with pytest logic
 
 [tool.ruff.lint.isort]
 force-single-line = false
@@ -134,8 +135,8 @@ follow_imports = "skip"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.11.1"
-ruff = "^0.6.0"
+mypy = "^1.11.2"
+ruff = "^0.6.4"
 
 [[tool.poetry.source]]
 name = "PyPI"
