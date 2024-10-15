@@ -80,7 +80,6 @@ ignore = [
     "PT007",
     "PT019",  # does not understand parametrization arguments which names start with underscore
     "S101",
-    "UP040",  # mypy does not support yet
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -135,7 +134,7 @@ follow_imports = "skip"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.11.2"
+mypy = "^1.12.0"
 ruff = "^0.6.9"
 
 [[tool.poetry.source]]
