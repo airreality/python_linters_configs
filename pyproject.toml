@@ -37,8 +37,8 @@ follow_imports = "skip"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.12.0"
-ruff = "^0.7.1"
+mypy = "^1.13.0"
+ruff = "^0.7.3"
 
 [[tool.poetry.source]]
 name = "PyPI"

@@ -73,16 +73,26 @@ select = [
 ]
 
 ignore = [
-    "D10",
+    "D10",    # Undocumented
     "PT004",  # https://github.com/astral-sh/ruff/issues/8796
     "PT005",  # https://github.com/astral-sh/ruff/issues/8796
-    "PT007",
-    "PT019",  # does not understand parametrization arguments which names start with underscore
-    "S101",
+    "PT007",  # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
+    "PT019",  # Fixture without value is injected as parameter, use `@pytest.mark.usefixtures` instead
+    "S101",   # Use of `assert` detected
 ]
 
 [lint.per-file-ignores]
-"tests/*" = ["ARG001", "ARG002", "ARG004", "FBT001"]  # not compatible with pytest logic
+"tests/*" = [
+    "ARG001",  # Unused function argument
+    "ARG002",  # Unused method argument
+    "ARG004",  # Unused static method argument
+    "FBT001",  # Boolean-typed positional argument in function definition
+]
+"tests/unit/*" = [
+    "PLC0415",  # `import` should be at the top-level of a file
+    "PLR0917",  # Too many positional arguments
+    "PLC2701",  # Private name import from external module
+]
 
 [lint.isort]
 force-single-line = false
