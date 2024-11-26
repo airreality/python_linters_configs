@@ -36,7 +36,7 @@ select = [
     "SLOT",  # flake8-slots
     "SIM",  # flake8-simplify
     "TID",  # flake8-tidy-imports
-    "TCH",  # flake8-type-checking
+    "TC",  # flake8-type-checking
     "INT",  # flake8-gettext
     "ARG",  # flake8-unused-arguments
     "PTH",  # flake8-use-pathlib
@@ -74,10 +74,9 @@ select = [
 
 ignore = [
     "D10",    # Undocumented
-    "PT004",  # https://github.com/astral-sh/ruff/issues/8796
-    "PT005",  # https://github.com/astral-sh/ruff/issues/8796
     "PT007",  # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
     "PT019",  # Fixture without value is injected as parameter, use `@pytest.mark.usefixtures` instead
+    "RUF021", # Checks for chained operators where adding parentheses could improve the clarity of the code
     "S101",   # Use of `assert` detected
 ]
 
