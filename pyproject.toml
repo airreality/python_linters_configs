@@ -1,6 +1,6 @@
 [tool.mypy]
 exclude = ".venv"
-python_version = "3.12"
+python_version = "3.13"
 
 check_untyped_defs = true
 disallow_any_generics = true
