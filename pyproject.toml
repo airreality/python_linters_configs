@@ -1,3 +1,16 @@
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.9.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [tool.mypy]
 exclude = ".venv"
 python_version = "3.13"
@@ -17,14 +30,3 @@ ignore_missing_imports = true
 # PyHamcrest has a lot of incorrect type annotations
 module = ["hamcrest"]
 follow_imports = "skip"
-
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-mypy = "^1.15.0"
-ruff = "^0.9.5"
-
-[[tool.poetry.source]]
-name = "PyPI"
-priority = "primary"
