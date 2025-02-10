@@ -26,6 +26,7 @@ ignore = [
     "ARG004",  # Unused static method argument
     "FBT001",  # Boolean-typed positional argument in function definition
     "SLF001",  # Checks for accesses on "private" class members
+    "PLR0913", # Function definitions that include too many arguments
 ]
 "tests/unit/*" = [
     "PLC0415",  # `import` should be at the top-level of a file
