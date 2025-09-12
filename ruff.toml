@@ -5,6 +5,7 @@ select = ["ALL"]
 
 ignore = [
     "COM",     # flake8-commas
+    "CPY",     # flake8-copyright
     "T20",     # flake8-print
     "FIX",     # flake8-fixme
     "ERA",     # eradicate
@@ -26,6 +27,9 @@ ignore = [
     "FBT001",  # Boolean-typed positional argument in function definition
     "SLF001",  # Checks for accesses on "private" class members
     "PLR0913", # Function definitions that include too many arguments
+]
+"tests/integration/*" = [
+    "PLR0917",  # Too many positional arguments
 ]
 "tests/unit/*" = [
     "PLC0415",  # `import` should be at the top-level of a file
