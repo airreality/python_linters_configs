@@ -40,7 +40,6 @@ ignore = [
 [lint.isort]
 force-single-line = false
 order-by-type = false
-required-imports = ["from __future__ import annotations"]
 
 [lint.pydocstyle]
 # https://github.com/astral-sh/ruff/issues/6606
