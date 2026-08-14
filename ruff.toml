@@ -1,4 +1,5 @@
 line-length = 120
+target-version = "py314"
 
 [lint]
 select = ["ALL"]
@@ -34,6 +35,10 @@ ignore = [
 "tests/unit/*" = [
     "PLC0415",  # `import` should be at the top-level of a file
     "PLR0917",  # Too many positional arguments
+    "PLC2701",  # Private name import from external module
+]
+"**/tests/fixtures/unit.py" = [
+    "PLC0415",  # `import` should be at the top-level of a file
     "PLC2701",  # Private name import from external module
 ]
 
