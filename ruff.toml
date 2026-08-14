@@ -11,35 +11,35 @@ ignore = [
     "FIX",     # flake8-fixme
     "ERA",     # eradicate
 
-    "ANN401",  # Checks that function arguments are annotated with a more specific type than `Any`
+    "any-type",
     "D10",     # Undocumented
-    "PT007",   # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
-    "PT019",   # Fixture without value is injected as parameter, use `@pytest.mark.usefixtures` instead
-    "RUF021",  # Checks for chained operators where adding parentheses could improve the clarity of the code
-    "S101",    # Use of `assert` detected
-    "TD002",   # Missing author in TODO
+    "pytest-parametrize-values-wrong-type",
+    "pytest-fixture-param-without-value",
+    "parenthesize-chained-operators",
+    "assert",
+    "missing-todo-author",
 ]
 
 [lint.per-file-ignores]
 "tests/*" = [
-    "ARG001",  # Unused function argument
-    "ARG002",  # Unused method argument
-    "ARG004",  # Unused static method argument
-    "FBT001",  # Boolean-typed positional argument in function definition
-    "SLF001",  # Checks for accesses on "private" class members
-    "PLR0913", # Function definitions that include too many arguments
+    "unused-function-argument",
+    "unused-method-argument",
+    "unused-static-method-argument",
+    "boolean-type-hint-positional-argument",
+    "private-member-access",
+    "too-many-arguments",
 ]
 "tests/integration/*" = [
-    "PLR0917",  # Too many positional arguments
+    "too-many-positional-arguments",
 ]
 "tests/unit/*" = [
-    "PLC0415",  # `import` should be at the top-level of a file
-    "PLR0917",  # Too many positional arguments
-    "PLC2701",  # Private name import from external module
+    "import-outside-top-level",
+    "too-many-positional-arguments",
+    "import-private-name",
 ]
 "**/tests/fixtures/unit.py" = [
-    "PLC0415",  # `import` should be at the top-level of a file
-    "PLC2701",  # Private name import from external module
+    "import-outside-top-level",
+    "import-private-name",
 ]
 
 [lint.isort]
