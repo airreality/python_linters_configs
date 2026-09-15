@@ -18,6 +18,7 @@ ignore = [
     "parenthesize-chained-operators",
     "assert",
     "missing-todo-author",
+    "suspicious-subprocess-import",
 ]
 
 [lint.per-file-ignores]
@@ -28,6 +29,7 @@ ignore = [
     "boolean-type-hint-positional-argument",
     "private-member-access",
     "too-many-arguments",
+    "too-many-locals",
 ]
 "tests/integration/*" = [
     "too-many-positional-arguments",
