@@ -5,4 +5,5 @@
   ],
   "abandonmentThreshold": null,
   "rangeStrategy": "bump",
+  "schedule": "* * * * 6",
 }
